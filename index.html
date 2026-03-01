@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>2D COD Arcade Online</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body{margin:0;font-family:sans-serif;display:flex;color:white;background:#111;}
+#lobby{width:250px;background:#222;padding:10px;box-sizing:border-box;height:100vh;}
+#gameArea{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+#gameCanvas{display:none;background:#111;}
+button{margin:2px;padding:5px;cursor:pointer;}
+ul{list-style:none;padding:0;}
+li{padding:3px 0;}
+.tab{display:none;}
+.tab.active{display:block;}
+</style>
+</head>
+<body>
+
+<div id="lobby">
+    <h2>Lobby</h2>
+    <div id="lobbyTabs">
+        <button data-tab="friendsTab">Amici</button>
+        <button data-tab="missionsTab">Missioni</button>
+        <button data-tab="shopTab">Negozio</button>
+    </div>
+
+    <div id="friendsTab" class="tab active">
+        <ul id="friendList"></ul>
+        <button id="addFriendBtn">+</button>
+    </div>
+    <div id="missionsTab" class="tab">
+        <ul id="missionsList">
+            <li>Uccidi 5 nemici - Ricompensa: 10 monete</li>
+            <li>Rianima 3 compagni - Ricompensa: 15 monete</li>
+            <li>Completa 1 partita - Ricompensa: 5 monete</li>
+        </ul>
+    </div>
+    <div id="shopTab" class="tab">
+        <ul id="shopList">
+            <li>Skin arma rossa - 20 monete <button>Acquista</button></li>
+            <li>Skin personaggio verde - 30 monete <button>Acquista</button></li>
+        </ul>
+    </div>
+
+</div>
+
+<div id="gameArea">
+    <h1>2D COD Arcade Online</h1>
+    <button id="playBtn">Play</button>
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+</body>
+</html>

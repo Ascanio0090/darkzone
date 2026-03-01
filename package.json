@@ -1,0 +1,82 @@
+# 🎮 DARKZONE — Guida per giocare online con gli amici
+
+## Cosa serve
+- Un account **GitHub** gratuito (github.com)
+- Un account **Railway** gratuito (railway.app)
+- 10 minuti di tempo
+
+---
+
+## PASSO 1 — Crea il repository GitHub
+
+1. Vai su **github.com** e fai login (o registrati gratis)
+2. Clicca sul **+** in alto a destra → **"New repository"**
+3. Nome: `darkzone` · Lascia tutto default · Clicca **"Create repository"**
+4. Nella pagina che appare, clicca **"uploading an existing file"**
+5. Trascina nella pagina questi file/cartelle:
+   ```
+   server.js
+   package.json
+   public/
+     index.html
+   ```
+6. Scrivi un messaggio tipo "primo upload" e clicca **"Commit changes"**
+
+---
+
+## PASSO 2 — Deploy su Railway
+
+1. Vai su **railway.app** e fai login con GitHub (pulsante "Login with GitHub")
+2. Clicca **"New Project"**
+3. Seleziona **"Deploy from GitHub repo"**
+4. Scegli il repo `darkzone` che hai appena creato
+5. Railway rileva automaticamente che è un progetto Node.js
+6. Clicca **"Deploy Now"** — aspetta 1-2 minuti
+7. Una volta completato, clicca sul progetto → tab **"Settings"** → **"Generate Domain"**
+8. Otterrai un URL tipo: `https://darkzone-production-xxxx.up.railway.app`
+
+---
+
+## PASSO 3 — Gioca!
+
+1. Condividi quell'URL con i tuoi amici
+2. Ognuno apre l'URL nel browser
+3. Inserisce il proprio nome e lo **stesso codice stanza** (es: `stanza1`)
+4. Il primo che entra preme **AVVIA PARTITA** quando siete tutti dentro
+5. Il gioco assegna automaticamente i team (3 blu / 3 rosso per 6 giocatori)
+
+---
+
+## Note importanti
+
+- Railway tier gratuito: **500 ore/mese** — più che sufficienti per giocare con amici
+- Il server si "addormenta" dopo inattività — il primo che apre l'URL lo risveglia in ~10 secondi
+- Se qualcuno si disconnette, viene rimosso dalla stanza automaticamente
+- **Stesso codice stanza = stessa partita** — codici diversi = partite separate
+
+---
+
+## Controlli
+
+| Tasto | Azione |
+|-------|--------|
+| WASD | Movimento |
+| Mouse | Mira |
+| Click sinistro | Spara |
+| R | Ricarica |
+| 1 / 2 / 3 | Cambia arma |
+| Tieni F | Rianima alleato abbattuto |
+| Q | Torna al menu |
+
+---
+
+## Problemi comuni
+
+**"Server offline?" sulla schermata di connessione**
+→ Il server è in sleep. Aspetta 10-15 secondi e riprova.
+
+**Lag alto**
+→ Railway free tier usa server US. Per server europei puoi upgraidare o usare Render.com (anche gratis, server EU disponibili).
+
+**"Stanza piena"**
+→ Massimo 6 giocatori per stanza. Usa un codice stanza diverso.
